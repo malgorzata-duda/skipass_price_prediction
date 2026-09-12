@@ -7583,7 +7583,7 @@ A large subset of predictor variables exhibits multicollinearity, which violates
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d04d7ba6">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d0a5964d">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7591,38 +7591,12 @@ A large subset of predictor variables exhibits multicollinearity, which violates
 <div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'European_Ski_Resorts.csv'</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=d0a5964d">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="sd">'''path = kagglehub.dataset_download(</span>
-<span class="sd">    "thomasnibb/european-ski-resorts"</span>
-<span class="sd">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="n">kagglehub</span><span class="o">.</span><span class="n">dataset_download</span><span class="p">(</span>
+    <span class="s2">"thomasnibb/european-ski-resorts"</span>
+<span class="p">)</span>
 
-<span class="sd">df = pd.read_csv(os.path.join(path, "European_Ski_Resorts.csv"))'''</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">"European_Ski_Resorts.csv"</span><span class="p">))</span>
 </pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>'path = kagglehub.dataset_download(\n    "thomasnibb/european-ski-resorts"\n)\n\ndf = pd.read_csv(os.path.join(path, "European_Ski_Resorts.csv"))'</pre>
 </div>
 </div>
 </div>
@@ -7632,7 +7606,7 @@ A large subset of predictor variables exhibits multicollinearity, which violates
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">'Unnamed: 0'</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -7657,7 +7631,7 @@ A large subset of predictor variables exhibits multicollinearity, which violates
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">shape</span>
@@ -7671,7 +7645,7 @@ A large subset of predictor variables exhibits multicollinearity, which violates
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>(376, 17)</pre>
 </div>
@@ -7694,7 +7668,7 @@ A large subset of predictor variables exhibits multicollinearity, which violates
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -7708,7 +7682,7 @@ A large subset of predictor variables exhibits multicollinearity, which violates
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -7860,7 +7834,7 @@ A large subset of predictor variables exhibits multicollinearity, which violates
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">columns</span>
@@ -7874,7 +7848,7 @@ A large subset of predictor variables exhibits multicollinearity, which violates
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>Index(['Resort', 'Country', 'HighestPoint', 'LowestPoint', 'DayPassPriceAdult',
        'BeginnerSlope', 'IntermediateSlope', 'DifficultSlope', 'TotalSlope',
@@ -7920,7 +7894,7 @@ A large subset of predictor variables exhibits multicollinearity, which violates
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -7970,7 +7944,7 @@ memory usage: 50.1+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">T</span>
@@ -7984,7 +7958,7 @@ memory usage: 50.1+ KB
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -8181,7 +8155,7 @@ memory usage: 50.1+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">'HighestPoint'</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -8195,7 +8169,7 @@ memory usage: 50.1+ KB
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -8318,7 +8292,7 @@ memory usage: 50.1+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"DayPassPriceAdult = 0 :"</span><span class="p">,(</span><span class="n">df</span><span class="p">[</span><span class="s1">'DayPassPriceAdult'</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
@@ -8364,7 +8338,7 @@ Sum of slope lengths = 0 : 14
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">'DayPassPriceAdult'</span><span class="p">]</span><span class="o">!=</span><span class="mi">0</span><span class="p">)</span><span class="o">&amp;</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'TotalSlope'</span><span class="p">]</span><span class="o">!=</span><span class="mi">0</span><span class="p">)</span><span class="o">&amp;</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'TotalLifts'</span><span class="p">]</span><span class="o">!=</span><span class="mi">0</span><span class="p">)</span><span class="o">&amp;</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'LiftCapacity'</span><span class="p">]</span><span class="o">!=</span><span class="mi">0</span><span class="p">)</span><span class="o">&amp;</span><span class="p">((</span><span class="n">df</span><span class="p">[</span><span class="s1">'BeginnerSlope'</span><span class="p">]</span><span class="o">!=</span><span class="mi">0</span><span class="p">)</span><span class="o">|</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'IntermediateSlope'</span><span class="p">]</span><span class="o">!=</span><span class="mi">0</span><span class="p">)</span><span class="o">|</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'DifficultSlope'</span><span class="p">]</span><span class="o">!=</span><span class="mi">0</span><span class="p">))]</span>
@@ -8389,7 +8363,7 @@ Sum of slope lengths = 0 : 14
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
@@ -8402,9 +8376,9 @@ Sum of slope lengths = 0 : 14
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>Resort               0
 Country              0
 HighestPoint         0
@@ -8432,7 +8406,7 @@ dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
@@ -8481,7 +8455,7 @@ dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">T</span>
@@ -8495,7 +8469,7 @@ dtype: int64</pre>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -8681,7 +8655,7 @@ dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">stats</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">exclude</span><span class="o">=</span><span class="s1">'number'</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
@@ -8698,7 +8672,7 @@ dtype: int64</pre>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -8828,7 +8802,7 @@ dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s2">"darkgrid"</span><span class="p">)</span>
@@ -8890,7 +8864,7 @@ The rest of the variables are characterized by very strong right skewness, with 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s2">"darkgrid"</span><span class="p">)</span>
@@ -8951,7 +8925,7 @@ The rest of the variables are characterized by very strong right skewness, with 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s2">"darkgrid"</span><span class="p">)</span>
@@ -9007,7 +8981,7 @@ The rest of the variables are characterized by very strong right skewness, with 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s2">"darkgrid"</span><span class="p">)</span>
@@ -9073,7 +9047,7 @@ The rest of the variables are characterized by very strong right skewness, with 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="n">numerical_columns</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
@@ -9149,7 +9123,7 @@ The rest of the variables are characterized by very strong right skewness, with 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>In order to mitigate the impact of extreme outliers present in the dataset, a logarithmic transformation was applied to the skewed variables. However, due to the presence of zero values in some variables, it was not possible to perform natural logarithmic transformation. Therefore, for these variables <em>log1p</em> transformation was used, which calculates natural logarithm of (X+1). For the remaining variables without zero values, the standard natural logarythm was calculated.</p>
+<p>In order to mitigate the impact of extreme outliers present in the dataset, a logarithmic transformation was applied to the skewed variables. However, due to the presence of zero values in some variables, it was not possible to perform natural logarithmic transformation. Therefore, for these variables <em>log1p</em> transformation was used, which calculates natural logarithm of (X+1). For the remaining variables without zero values, the standard natural logarithm was calculated.</p>
 </div>
 </div>
 </div>
@@ -9158,7 +9132,7 @@ The rest of the variables are characterized by very strong right skewness, with 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">log_cols</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">numerical_columns</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
@@ -9176,7 +9150,7 @@ The rest of the variables are characterized by very strong right skewness, with 
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[22]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>['BeginnerSlope',
  'IntermediateSlope',
@@ -9197,7 +9171,7 @@ The rest of the variables are characterized by very strong right skewness, with 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">df_log</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -9228,7 +9202,7 @@ The rest of the variables are characterized by very strong right skewness, with 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s2">"darkgrid"</span><span class="p">)</span>
@@ -9265,7 +9239,7 @@ The rest of the variables are characterized by very strong right skewness, with 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s2">"darkgrid"</span><span class="p">)</span>
@@ -9342,7 +9316,7 @@ The rest of the variables are characterized by very strong right skewness, with 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="n">numerical_columns</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
@@ -9393,7 +9367,7 @@ The rest of the variables are characterized by very strong right skewness, with 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">reg_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'DayPassPriceAdult'</span><span class="p">,</span><span class="s1">'HighestPoint'</span><span class="p">,</span><span class="s1">'log_TotalSlope'</span><span class="p">,</span><span class="s1">'log1p_GondolaLifts'</span><span class="p">]</span>
@@ -9407,7 +9381,7 @@ The rest of the variables are characterized by very strong right skewness, with 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="n">df_log</span><span class="p">[</span><span class="n">reg_cols</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
@@ -9477,7 +9451,7 @@ It should be noted that a country can belong to two groups simultaneously: Franc
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">df_log</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">'Resort'</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -9491,7 +9465,7 @@ It should be noted that a country can belong to two groups simultaneously: Franc
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">df_log</span><span class="p">[</span><span class="s1">'AlpineCountry'</span><span class="p">]</span><span class="o">=</span><span class="n">df_log</span><span class="p">[</span><span class="s1">'Country'</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">'Austria'</span><span class="p">,</span><span class="s1">'France'</span><span class="p">,</span><span class="s1">'Switzerland'</span><span class="p">,</span><span class="s1">'Italy'</span><span class="p">,</span><span class="s1">'Germany'</span><span class="p">,</span><span class="s1">'Slovenia'</span><span class="p">,</span><span class="s1">'Liechtenstein'</span><span class="p">])</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
@@ -9508,7 +9482,7 @@ It should be noted that a country can belong to two groups simultaneously: Franc
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">df_log</span><span class="p">[</span><span class="s1">'NightSki'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_log</span><span class="p">[</span><span class="s1">'NightSki'</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="s1">'Yes'</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s1">'No'</span><span class="p">:</span><span class="mi">0</span><span class="p">})</span>
@@ -9534,7 +9508,7 @@ It should be noted that a country can belong to two groups simultaneously: Franc
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">df_log</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">'DayPassPriceAdult'</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -9602,7 +9576,7 @@ In the further analyses, two sets of predictor variables were considered:</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [33]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">X_train_sub</span> <span class="o">=</span> <span class="n">X_train</span><span class="p">[[</span><span class="s1">'const'</span><span class="p">,</span><span class="s1">'HighestPoint'</span><span class="p">,</span><span class="s1">'log_TotalSlope'</span><span class="p">,</span><span class="s1">'log1p_GondolaLifts'</span><span class="p">,</span><span class="s1">'AlpineCountry'</span><span class="p">,</span><span class="s1">'PyreneanCountry'</span><span class="p">,</span><span class="s1">'NordicCountry'</span><span class="p">,</span><span class="s1">'Snowparks'</span><span class="p">,</span><span class="s1">'NightSki'</span><span class="p">]]</span>
@@ -9617,7 +9591,7 @@ In the further analyses, two sets of predictor variables were considered:</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [34]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">lr</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">X_train_sub</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
@@ -9631,7 +9605,7 @@ In the further analyses, two sets of predictor variables were considered:</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [35]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">lr</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
@@ -9645,7 +9619,7 @@ In the further analyses, two sets of predictor variables were considered:</p>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[35]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[34]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <table class="simpletable">
 <caption>OLS Regression Results</caption>
@@ -9662,7 +9636,7 @@ In the further analyses, two sets of predictor variables were considered:</p>
 <th>Date:</th> <td>Sat, 12 Sep 2026</td> <th>  Prob (F-statistic):</th> <td>2.40e-59</td>
 </tr>
 <tr>
-<th>Time:</th> <td>12:18:10</td> <th>  Log-Likelihood:    </th> <td> -929.87</td>
+<th>Time:</th> <td>23:48:54</td> <th>  Log-Likelihood:    </th> <td> -929.87</td>
 </tr>
 <tr>
 <th>No. Observations:</th> <td>   285</td> <th>  AIC:               </th> <td>   1878.</td>
@@ -9743,7 +9717,7 @@ In the further analyses, two sets of predictor variables were considered:</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [36]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [35]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">lr_coef</span> <span class="o">=</span> <span class="n">lr</span><span class="o">.</span><span class="n">params</span>
@@ -9757,7 +9731,7 @@ In the further analyses, two sets of predictor variables were considered:</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [37]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">y_pred_lr</span> <span class="o">=</span> <span class="n">lr</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_sub</span><span class="p">)</span>
@@ -9783,7 +9757,7 @@ In the further analyses, two sets of predictor variables were considered:</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [38]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [37]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">rmse_train_lr</span> <span class="o">=</span> <span class="n">root_mean_squared_error</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">y_pred_train_lr</span><span class="p">)</span>
@@ -9799,7 +9773,7 @@ In the further analyses, two sets of predictor variables were considered:</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [39]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [38]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">rmse_test_lr</span> <span class="o">=</span> <span class="n">root_mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_lr</span><span class="p">)</span>
@@ -9815,7 +9789,7 @@ In the further analyses, two sets of predictor variables were considered:</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [40]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [39]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"RMSE train: "</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">rmse_train_lr</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
@@ -9846,7 +9820,7 @@ R2 train:  0.65
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [41]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"RMSE test: "</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">rmse_test_lr</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
@@ -9916,39 +9890,17 @@ R2 test:  0.61
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a8dfdf1c">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=a8dfdf1c">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [42]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [41]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">X_train_sub</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">'const'</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">X_test_sub</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">'const'</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">X_train_sub</span> <span class="o">=</span> <span class="n">X_train_sub</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">'const'</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">X_test_sub</span> <span class="o">=</span> <span class="n">X_test_sub</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">'const'</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>C:\Users\Malgorzata\AppData\Local\Temp\ipykernel_18568\1172008397.py:1: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame
-
-See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-  X_train_sub.drop('const',axis=1,inplace=True)
-C:\Users\Malgorzata\AppData\Local\Temp\ipykernel_18568\1172008397.py:2: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame
-
-See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-  X_test_sub.drop('const',axis=1,inplace=True)
-</pre>
 </div>
 </div>
 </div>
@@ -9958,7 +9910,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [43]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [42]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
@@ -9977,7 +9929,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [44]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [43]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">alphas</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
@@ -9992,7 +9944,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [45]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [44]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">ridge_cv</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_sub_scaled</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
@@ -10007,7 +9959,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[45]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[44]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>np.float64(1.0)</pre>
 </div>
@@ -10019,7 +9971,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [46]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [45]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">limited_cols</span> <span class="o">=</span> <span class="n">X_train_sub</span><span class="o">.</span><span class="n">columns</span>
@@ -10033,7 +9985,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [47]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [46]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">ridge_coef</span> <span class="o">=</span> <span class="n">ridge_cv</span><span class="o">.</span><span class="n">coef_</span>
@@ -10047,7 +9999,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [48]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [47]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">ridge_intercept</span> <span class="o">=</span> <span class="n">ridge_cv</span><span class="o">.</span><span class="n">intercept_</span>
@@ -10061,7 +10013,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [49]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [48]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">y_pred_ridge</span> <span class="o">=</span> <span class="n">ridge_cv</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_sub_scaled</span><span class="p">)</span>
@@ -10087,7 +10039,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [50]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [49]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">rmse_train_ridge</span> <span class="o">=</span> <span class="n">root_mean_squared_error</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">y_pred_train_ridge</span><span class="p">)</span>
@@ -10103,7 +10055,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [51]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [50]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">rmse_test_ridge</span> <span class="o">=</span> <span class="n">root_mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_ridge</span><span class="p">)</span>
@@ -10119,7 +10071,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [52]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [51]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"RMSE train: "</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">rmse_train_ridge</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
@@ -10150,7 +10102,7 @@ R2 train:  0.65
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [53]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [52]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"RMSE test: "</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">rmse_test_ridge</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
@@ -10214,7 +10166,7 @@ R2 test:  0.61
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [54]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [53]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">alphas</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
@@ -10229,7 +10181,7 @@ R2 test:  0.61
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [55]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [54]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">lasso_cv</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_sub_scaled</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
@@ -10244,7 +10196,7 @@ R2 test:  0.61
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[55]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[54]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>np.float64(0.1)</pre>
 </div>
@@ -10256,7 +10208,7 @@ R2 test:  0.61
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [56]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [55]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">lasso_coef</span> <span class="o">=</span> <span class="n">lasso_cv</span><span class="o">.</span><span class="n">coef_</span>
@@ -10270,7 +10222,7 @@ R2 test:  0.61
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [57]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [56]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">lasso_intercept</span> <span class="o">=</span> <span class="n">lasso_cv</span><span class="o">.</span><span class="n">intercept_</span>
@@ -10284,7 +10236,7 @@ R2 test:  0.61
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [58]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [57]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">y_pred_lasso</span> <span class="o">=</span> <span class="n">lasso_cv</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_sub_scaled</span><span class="p">)</span>
@@ -10310,7 +10262,7 @@ R2 test:  0.61
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [59]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [58]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">rmse_train_lasso</span> <span class="o">=</span> <span class="n">root_mean_squared_error</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">y_pred_train_lasso</span><span class="p">)</span>
@@ -10326,7 +10278,7 @@ R2 test:  0.61
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [60]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [59]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">rmse_test_lasso</span> <span class="o">=</span> <span class="n">root_mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_lasso</span><span class="p">)</span>
@@ -10342,7 +10294,7 @@ R2 test:  0.61
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [61]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [60]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"RMSE train: "</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">rmse_train_lasso</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
@@ -10373,7 +10325,7 @@ R2 train:  0.65
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [62]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [61]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"RMSE test: "</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">rmse_test_lasso</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
@@ -10437,7 +10389,7 @@ R2 test:  0.62
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [63]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [62]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">X_train_full</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">'log_TotalLifts'</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -10455,7 +10407,7 @@ R2 test:  0.62
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [64]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [63]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">scaler_full</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
@@ -10478,7 +10430,7 @@ R2 test:  0.62
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [65]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [64]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">alphas</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
@@ -10495,7 +10447,7 @@ R2 test:  0.62
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[65]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[64]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>np.float64(1.0)</pre>
 </div>
@@ -10507,7 +10459,7 @@ R2 test:  0.62
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [66]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [65]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">ridge_full_coef</span> <span class="o">=</span> <span class="n">ridge_cv_full</span><span class="o">.</span><span class="n">coef_</span>
@@ -10522,7 +10474,7 @@ R2 test:  0.62
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [67]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [66]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">y_pred_ridge_full</span> <span class="o">=</span> <span class="n">ridge_cv_full</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_full_scaled</span><span class="p">)</span>
@@ -10548,7 +10500,7 @@ R2 test:  0.62
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [68]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [67]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">rmse_train_ridge_full</span> <span class="o">=</span> <span class="n">root_mean_squared_error</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">y_pred_train_ridge_full</span><span class="p">)</span>
@@ -10567,7 +10519,7 @@ R2 test:  0.62
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [69]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [68]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"RMSE train: "</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">rmse_train_ridge_full</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
@@ -10598,7 +10550,7 @@ R2 train:  0.66
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [70]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [69]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"RMSE test: "</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">rmse_test_ridge_full</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
@@ -10662,7 +10614,7 @@ R2 test:  0.61
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [71]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [70]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">alphas</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
@@ -10679,7 +10631,7 @@ R2 test:  0.61
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[71]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[70]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>np.float64(0.1)</pre>
 </div>
@@ -10691,7 +10643,7 @@ R2 test:  0.61
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [72]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [71]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">lasso_full_coef</span> <span class="o">=</span> <span class="n">lasso_cv_full</span><span class="o">.</span><span class="n">coef_</span>
@@ -10706,7 +10658,7 @@ R2 test:  0.61
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [73]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [72]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">y_pred_lasso_full</span> <span class="o">=</span> <span class="n">lasso_cv_full</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_full_scaled</span><span class="p">)</span>
@@ -10732,7 +10684,7 @@ R2 test:  0.61
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [74]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [73]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">rmse_train_lasso_full</span> <span class="o">=</span> <span class="n">root_mean_squared_error</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">y_pred_train_lasso_full</span><span class="p">)</span>
@@ -10751,7 +10703,7 @@ R2 test:  0.61
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [75]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [74]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"RMSE train: "</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">rmse_train_lasso_full</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
@@ -10782,7 +10734,7 @@ R2 train:  0.65
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [76]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [75]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"RMSE test: "</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">rmse_test_lasso_full</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
@@ -10846,7 +10798,7 @@ R2 test:  0.62
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [77]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [76]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">results_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
@@ -10870,7 +10822,7 @@ R2 test:  0.62
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [78]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [77]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">results_df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">'rmse_test'</span><span class="p">)</span>
@@ -10884,7 +10836,7 @@ R2 test:  0.62
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[78]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[77]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -10961,6 +10913,64 @@ R2 test:  0.62
 </tbody>
 </table>
 </div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=22fdbf93">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [78]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">results_df_plot</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s2">"RMSE train"</span><span class="p">:[</span><span class="n">rmse_train_lr</span><span class="p">,</span> <span class="n">rmse_train_ridge</span><span class="p">,</span> <span class="n">rmse_train_lasso</span><span class="p">,</span><span class="n">rmse_train_ridge_full</span><span class="p">,</span><span class="n">rmse_train_lasso_full</span><span class="p">],</span>
+        <span class="s2">"MAE train"</span><span class="p">:[</span><span class="n">mae_train_lr</span><span class="p">,</span> <span class="n">mae_train_ridge</span><span class="p">,</span> <span class="n">mae_train_lasso</span><span class="p">,</span><span class="n">mae_train_ridge_full</span><span class="p">,</span><span class="n">mae_train_lasso_full</span><span class="p">],</span>
+        <span class="s2">"R2 train"</span><span class="p">:[</span><span class="n">r2_train_lr</span><span class="p">,</span> <span class="n">r2_train_ridge</span><span class="p">,</span> <span class="n">r2_train_lasso</span><span class="p">,</span><span class="n">r2_train_ridge_full</span><span class="p">,</span><span class="n">r2_train_lasso_full</span><span class="p">],</span>
+        <span class="s2">"RMSE test"</span><span class="p">:[</span><span class="n">rmse_test_lr</span><span class="p">,</span> <span class="n">rmse_test_ridge</span><span class="p">,</span> <span class="n">rmse_test_lasso</span><span class="p">,</span><span class="n">rmse_test_ridge_full</span><span class="p">,</span><span class="n">rmse_test_lasso_full</span><span class="p">],</span>
+        <span class="s2">"MAE test"</span><span class="p">:[</span><span class="n">mae_test_lr</span><span class="p">,</span> <span class="n">mae_test_ridge</span><span class="p">,</span> <span class="n">mae_test_lasso</span><span class="p">,</span><span class="n">mae_test_ridge_full</span><span class="p">,</span><span class="n">mae_test_lasso_full</span><span class="p">],</span>
+        <span class="s2">"R2 test"</span><span class="p">:[</span><span class="n">r2_test_lr</span><span class="p">,</span> <span class="n">r2_test_ridge</span><span class="p">,</span> <span class="n">r2_test_lasso</span><span class="p">,</span><span class="n">r2_test_ridge_full</span><span class="p">,</span><span class="n">r2_test_lasso_full</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">'LR (limited)'</span><span class="p">,</span><span class="s1">'Ridge (limited)'</span><span class="p">,</span><span class="s1">'LASSO, (limited)'</span><span class="p">,</span><span class="s1">'Ridge (all)'</span><span class="p">,</span><span class="s1">'LASSO (all)'</span><span class="p">]</span>
+<span class="p">)</span>
+
+<span class="n">results_df_plot</span><span class="p">[[</span><span class="s1">'RMSE train'</span><span class="p">,</span><span class="s1">'MAE train'</span><span class="p">,</span><span class="s1">'RMSE test'</span><span class="p">,</span><span class="s1">'MAE test'</span><span class="p">]]</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s1">'bar'</span><span class="p">,</span>
+    <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+    <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">'orange'</span><span class="p">,</span><span class="s1">'palevioletred'</span><span class="p">,</span><span class="s1">'lightseagreen'</span><span class="p">,</span><span class="s1">'mediumvioletred'</span><span class="p">,</span><span class="s1">'teal'</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">results_df_plot</span><span class="p">[[</span><span class="s1">'R2 train'</span><span class="p">,</span><span class="s1">'R2 test'</span><span class="p">]]</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s1">'bar'</span><span class="p">,</span>
+    <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+    <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">'orange'</span><span class="p">,</span><span class="s1">'palevioletred'</span><span class="p">,</span><span class="s1">'lightseagreen'</span><span class="p">,</span><span class="s1">'mediumvioletred'</span><span class="p">,</span><span class="s1">'teal'</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedImage jp-OutputArea-output" tabindex="0">
+<img alt="No description has been provided for this image" class="" src="data:image/png;base64,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"/>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedImage jp-OutputArea-output" tabindex="0">
+<img alt="No description has been provided for this image" class="" src="data:image/png;base64,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"/>
 </div>
 </div>
 </div>
@@ -11315,7 +11325,7 @@ Name: coef, dtype: float64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [120]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [84]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">3</span>
@@ -11355,7 +11365,7 @@ Name: coef, dtype: float64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [122]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [85]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">'Resort'</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">'Verbier'</span><span class="p">)]</span>
@@ -11369,7 +11379,7 @@ Name: coef, dtype: float64</pre>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[122]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[85]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -11441,7 +11451,7 @@ Name: coef, dtype: float64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [85]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [86]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">66</span>
@@ -11495,7 +11505,7 @@ Name: coef, dtype: float64</pre>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>The purpose of the project was to build <strong>a regression model predicting skipass prices in European ski resorts</strong> based on the resort's characteristics, such as e.g. highest point altitude, length of ski slopes, number of lifts and its location. The dataset used in the analysis exhibited <strong>strong, and in some cases almost perfect multicollinearity</strong>, which violated the assumptions of valid OLS model estimation. Therefore, as part of the project, performances of <strong>regularization methods (Ridge and LASSO)</strong> were compared to the performance of a standard OLS method, in the face of strong multicollinearity. Moreover, models were trained using two different sets of predictors, which allowed for a more comprehensive assessment of the regularization methods.</p>
-<p>Each of the trained models performed very similarly, <strong>explaining approximately 60% of the ski pass price variation</strong>. The models made p<strong>rediction errors (RMSE) around €6.3 on the train and €6.8 on the test</strong> dataset (while a mean skipass price is €42).<br/>
+<p>Each of the trained models performed very similarly, <strong>explaining approximately 60% of the ski pass price variation</strong>. The models made <strong>prediction errors (RMSE) around €6.3 on the train and €6.8 on the test</strong> dataset (while a mean skipass price is €42).<br/>
 The final best-performing model was the <strong>LASSO model</strong>, estimated on the limited set of predictors. However, it should be noted that the differences between the models' performances were almost negligible.</p>
 <p>In the final LASSO regression model the problem of multicollinearity was addressed through two approaches. Firstly, only a subset of explaining variables was chosen, in order to eliminate the pairs of almost perfectly correlated variables. That approach allowed to weaken the strength of multicollinearity in the dataset, but did not completely mitigate the problem. Therefore, in the estimation process a regularization method was used, which allowed to shrink the coefficients towards zero and make their estimation more stable.</p>
 <p>The interpretation of the final model allowed to assess the impact of each variable on the ski pass price in the resort. Some of the relationships (with other variables held constant) include:</p>
@@ -11505,7 +11515,7 @@ The final best-performing model was the <strong>LASSO model</strong>, estimated 
 <li>A one standard deviation rise of the altitude of the highest point in the resort is associated with a €2.67 rise of ski pass price.</li>
 </ul>
 <p>Finally, SHAP profiles for 3 selected ski resorts were presented. The analysis of the profiles allowed to identify the features which contribute to e.g. extremely high prices in the Swiss Verbier 4 Vallees resort or relatively low prices in the local Polish resort in Bialka Tatrzanska.</p>
-<p>The estimated regression model may be valuable in various different application.</p>
+<p>The estimated regression model may be valuable in various different applications.</p>
 <ul>
 <li>Firstly, it can allow to <strong>assess an appropriate price for the potential new ski resorts</strong> in Europe, based on their characteristics.</li>
 <li>Secondly, it allows to <strong>estimate a suitable price shift</strong> when changes in the existing ski resorts are introduced. For example, the resort's management can assess if a construction of a new gondola lift would be profitable, by comparing its cost to the potential income from the increased ski pass prices.</li>
